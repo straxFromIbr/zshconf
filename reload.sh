@@ -1,5 +1,5 @@
 #! /bin/bash
-set -euxoC pipefail
+set -uxoC pipefail
 cd "$(dirname "$0")"
 
 err() {
