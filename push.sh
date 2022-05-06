@@ -7,13 +7,14 @@ err() {
 }
 
 
-cp "${HOME}/.zshrc" .
+diff './zshrc' "${HOME}/.zshrc"
 read -p "Upload configs. OK? (y/N): " yn
 case "${yn}" in [yY]*) ;; *)
     echo "abort."
     exit
     ;;
 esac
+cp "${HOME}/.zshrc" './zshrc'
 git add -A
 git commit -m 'update shell configures'
 git push --all

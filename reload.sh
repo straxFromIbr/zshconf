@@ -7,6 +7,7 @@ err() {
 }
 
 git pull origin main
+diff './zshrc' "${HOME}/.zshrc"
 read -p "Rewrite configs. OK? (y/N): " yn
 case "${yn}" in [yY]*) ;; *)
     echo "abort."
